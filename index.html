@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Field Guide to Light</title>
+  <meta name="description" content="Six things light does on its way to your eyes, drawn live in your browser at your screen's full resolution." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="top__title" href="#ch-0" data-goto="0">A Field Guide to Light</a>
+    <p class="top__count" aria-hidden="true"><span id="count">00</span> / 06</p>
+  </header>
+
+  <nav class="index" aria-label="Chapters">
+    <ol>
+      <li><a href="#ch-1" data-goto="1"><span>01</span> Scattering</a></li>
+      <li><a href="#ch-2" data-goto="2"><span>02</span> Aurora</a></li>
+      <li><a href="#ch-3" data-goto="3"><span>03</span> Caustics</a></li>
+      <li><a href="#ch-4" data-goto="4"><span>04</span> Dispersion</a></li>
+      <li><a href="#ch-5" data-goto="5"><span>05</span> Bioluminescence</a></li>
+      <li><a href="#ch-6" data-goto="6"><span>06</span> Lensing</a></li>
+    </ol>
+  </nav>
+
+  <main class="chapters">
+    <section class="ch ch--intro" data-ch="0" id="ch-0">
+      <h1 class="ch__title" data-split>Light, up close</h1>
+      <div class="ch__side">
+        <p class="ch__body">Six things light does on its way to your eyes. Every scene is drawn live by your graphics card at your screen's full resolution: no photos, no video.</p>
+        <p class="ch__hint">Scroll to begin</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="1" id="ch-1">
+      <p class="ch__num">01</p>
+      <h2 class="ch__title" data-split>Scattering</h2>
+      <div class="ch__side">
+        <p class="ch__body">Air scatters short wavelengths far more than long ones, blue about six times more than red. At noon the whole sky fills with blue. At sunset, sunlight crosses so much air that mostly red is left.</p>
+        <p class="ch__data">Rayleigh scattering &prop; 1/&lambda;<sup>4</sup><br />Keep scrolling to set the sun</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="2" id="ch-2">
+      <p class="ch__num">02</p>
+      <h2 class="ch__title" data-split>Aurora</h2>
+      <div class="ch__side">
+        <p class="ch__body">Charged particles from the Sun follow Earth's magnetic field down into the upper atmosphere. Oxygen around 100 to 250 km up glows green; thinner oxygen higher up glows red.</p>
+        <p class="ch__data">Green 557.7 nm, red 630.0 nm</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="3" id="ch-3">
+      <p class="ch__num">03</p>
+      <h2 class="ch__title" data-split>Caustics</h2>
+      <div class="ch__side">
+        <p class="ch__body">The bright net on a pool floor is sunlight focused by the moving curves of the water's surface. Every ripple is a small, imperfect lens.</p>
+        <p class="ch__data">From the Greek kaustikos, burning</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="4" id="ch-4">
+      <p class="ch__num">04</p>
+      <h2 class="ch__title" data-split>Dispersion</h2>
+      <div class="ch__side">
+        <p class="ch__body">Glass slows violet light a little more than red, so each colour leaves a prism at its own angle. In 1666 Newton used this to show that white light is a mixture of colours.</p>
+        <p class="ch__data">Violet bends most, red least</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="5" id="ch-5">
+      <p class="ch__num">05</p>
+      <h2 class="ch__title" data-split>Bioluminescence</h2>
+      <div class="ch__side">
+        <p class="ch__body">In the deep sea, most light is made by animals: about three quarters of the creatures observed off California glow. Plankton flash when something disturbs them.</p>
+        <p class="ch__data">Move through them to see it</p>
+      </div>
+    </section>
+
+    <section class="ch" data-ch="6" id="ch-6">
+      <p class="ch__num">06</p>
+      <h2 class="ch__title" data-split>Lensing</h2>
+      <div class="ch__side">
+        <p class="ch__body">Mass bends the path of light. When a distant galaxy sits exactly behind a heavy object, its light reaches us from every side at once, as a ring.</p>
+        <p class="ch__data">First measured in the 1919 solar eclipse<br />Keep scrolling to line it up</p>
+      </div>
+    </section>
+
+    <section class="ch ch--end" data-ch="7" id="ch-7">
+      <h2 class="ch__title" data-split>Always moving</h2>
+      <div class="ch__side">
+        <p class="ch__body">Light from the Sun is eight minutes old when it reaches you. Everything on this page was drawn while you read it.</p>
+        <a class="ch__cta" href="#ch-0" data-goto="0">Back to first light</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="track" aria-hidden="true"></div>
+  <noscript><p class="noscript">This page draws its scenes with JavaScript and WebGL.</p></noscript>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
